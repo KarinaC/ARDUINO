@@ -1,3 +1,7 @@
+// IMPORTANT!!! For this script to work you need to ...
+// 1) install on the IDE the Adafruit  librarie
+// 2) also clone the Adafruit_Sensor from this git repo: https://github.com/adafruit/Adafruit_Sensor
+
 #include <SD.h>
 
 #include <Console.h>
