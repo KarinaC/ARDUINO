@@ -1,5 +1,8 @@
+#include <SD.h>
+
 #include <Console.h>
-#include "DHT.h"
+#include <DHT.h>
+
 
 #define DHTPIN 2 // what digital pin we are connected to 
 #define DHTTYPE DHT11 // type os sensor we are using
@@ -8,7 +11,7 @@ DHT dht(DHTPIN, DHTTYPE);
 int Hsensor = A5;
 
 //Beggining of the VOID SETUP
-void setup setup()
+void setup()
      {
      Bridge.begin();
      Console.begin();
@@ -22,7 +25,7 @@ void loop()
     {
     delay(1800);  // wait a few seconds between measurements.
 
-   float h = dth.readHumidity(); // read Humidity
+   float h = dht.readHumidity(); // read Humidity
    float t = dht.readTemperature(); // read temperature ac Celsius (default)
    float f = dht.readTemperature(false); //read temperature as Fahrenheit (isFahrenheit = true)
 
